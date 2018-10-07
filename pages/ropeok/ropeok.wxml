@@ -1,0 +1,25 @@
+<view class="section">
+  <form bindsubmit="bindFormSubmit" bindreset="formReset">
+    <text>日期选择</text>
+    <view class="textareaT" name="userName">
+      <text class="textriqi">{{dateValue}}</text>
+      <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+<image class="imgrili" src="../imges/rili.png"></image>
+</picker>
+    </view>
+    <text>申请人信息</text>
+    <view class="textareaT2" name="userName">
+      <view class="itemView">用户名：
+        <input name="userName" placeholder="请输入用户名" bindinput="userNameInput" />
+      </view>
+      <view class="lineV"></view>
+      <view class="itemView">密码：
+        <input name="userName" placeholder="请输入密码" bindinput="pasWInput" />
+      </view>
+     
+    </view>
+    <button class="submitClick" formType="submit"> 登 录</button>
+  </form>
+  <view>{{tip}}</view>
+  <view>{{userName}}</view>
+</view>
