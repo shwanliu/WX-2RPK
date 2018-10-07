@@ -35,5 +35,8 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  ropeokData: {
+    ropeokUser: null,     // 在app.js中声明变量userinfo，保存用户信息
+  },
 })

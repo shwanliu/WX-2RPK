@@ -1,4 +1,5 @@
 <!--logs.wxml-->
-<!-- <view class="table"> -->
-  <web-view src="   "></web-view>
-<!-- </view> -->
+<view class="table">
+  <!-- <web-view src="https://ropeok:ropeok@dast30e7x4nwv.cloudfront.net/index.html"></web-view> -->
+  <web-view src="https://{{userName}}:{{passWord}}@dast30e7x4nwv.cloudfront.net/index.html"></web-view>
+</view>

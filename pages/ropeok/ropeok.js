@@ -1,14 +1,56 @@
+const app = getApp()      // 在index.js的Page函数外获取应用实例
 
 Page({
-  goBaidu: function () {
-    wx.navigateTo({
-      url: '../logs/logs', //
-      success: function () {
+  data: {
+    username: null,
+    password: null,
+  },
 
-      },       //成功后的回调；
-      fail: function () { },         //失败后的回调；
-      complete: function () { }      //结束后的回调(成功，失败都会执行)
+  usernameInput: function (event) {
+    console.log(event)
+    this.setData({ username: event.detail.value })
+  },
+
+  passwordInput: function (event) {
+    console.log(event)
+    this.setData({ password: event.detail.value })
+  },
+
+  onLoad: function (options) {
+    // 页面初始化 options为页面跳转所带来的参数
+  },
+  onReady: function () {
+    // 页面渲染完成
+  },
+  onShow: function () {
+    // 页面显示
+  },
+  onHide: function () {
+    // 页面隐藏
+  },
+  onUnload: function () {
+    // 页面关闭
+  },
+  imgClick: function () {
+  },
+  // 用户名和密码输入框事件
+  userNameInput: function (e) {
+    this.setData({
+      userName: e.detail.value
+    })
+  },
+  pasWInput: function (e) {
+    this.setData({
+      SFZ: e.detail.value
+    })
+  },
+
+  loginBtnClick: function () {
+    app.ropeokData.ropeokUser= { username: this.data.username, password: this.data.password }
+    // wx.redirectTo({ url: "../logs/logs" })
+    wx.navigateTo({
+      url: '../logs/logs',
     })
   }
-})
 
+})
